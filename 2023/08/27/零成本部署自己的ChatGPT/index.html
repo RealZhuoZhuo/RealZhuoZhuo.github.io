@@ -11,6 +11,11 @@
   
   <title>
     
+      零成本部署自己的ChatGPT 
+      
+      
+      |
+    
      Zhuo&#39;s Blog
   </title>
 
@@ -97,43 +102,160 @@
 
 
       <div class="flex-container">
-        <div class="container index">
-  <div class="post-list">
-    <!-- 遍历渲染文章 -->
-    
-      <div class="post-item" title="零成本部署自己的ChatGPT">
-        <div class="time-m-d">2023-08-27</div>
-        <div class="title">
-          <a href="/2023/08/27/%E9%9B%B6%E6%88%90%E6%9C%AC%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84ChatGPT/">
-            
-              
-                <span>零成本部署自己的ChatGPT</span>
-              
-            
-          </a>
-        </div>
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">零成本部署自己的ChatGPT</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+          2023-08-27 11:05:28
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="标签"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/ChatGPT/" title="ChatGPT">
+                    #ChatGPT
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
-    
-      <div class="post-item" title="Hello World">
-        <div class="time-m-d">2023-08-12</div>
-        <div class="title">
-          <a href="/2023/08/12/hello-world/">
-            
-              
-                <span>Hello World</span>
-              
-            
-          </a>
-        </div>
+      <div class="markdown-body">
+        <h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><blockquote>
+<ul>
+<li>需要一个Chatgpt的API</li>
+<li>GitHub账号</li>
+<li>Vercel账号（可以通过GitHub来注册）</li>
+</ul>
+</blockquote>
+<h1 id="1-寻找合适自己的项目"><a href="#1-寻找合适自己的项目" class="headerlink" title="1.寻找合适自己的项目"></a>1.寻找合适自己的项目</h1><blockquote>
+<p>本文章采用<a target="_blank" rel="noopener" href="https://github.com/RealZhuoZhuo/ChatGPT-Next-Web">ChatGPT-Next-Web</a>来部署</p>
+</blockquote>
+<p>有多个项目来选择<a target="_blank" rel="noopener" href="https://github.com/Chanzhaoyu/chatgpt-web">chatgpt-web</a>，<a target="_blank" rel="noopener" href="https://github.com/ourongxing/chatgpt-vercel">chatgpt-vercel</a>，<a target="_blank" rel="noopener" href="https://github.com/RealZhuoZhuo/ChatGPT-Next-Web/tree/main">ChatGPT-Next-Web</a>，这里推荐<strong>ChatGPT-Next-Web</strong></p>
+<img src="https://ice.frostsky.com/2023/08/26/e6c40687bca57fbbe89a6e8d04d0dac0.png" alt="GitHub" title="GitHub,Social Coding" width="650" height="600" />
+
+<p>该项目交互性强，功能多</p>
+<ul>
+<li><p>登录GitHub，fork项目<br><img src="https://ice.frostsky.com/2023/08/26/787d8c5240b69c4e2aed82fd6f826bb7.png" alt="787d8c5240b69c4e2aed82fd6f826bb7.png"></p>
+</li>
+<li><p>点击只复制主分支<br><img src="https://ice.frostsky.com/2023/08/26/b7a30345796d44f0586a7cccf5a7cd7b.png" alt="b7a30345796d44f0586a7cccf5a7cd7b.png"><br>这样你就将该项目复制在自己的仓库了</p>
+<h1 id="2-开始部署"><a href="#2-开始部署" class="headerlink" title="2.开始部署"></a>2.开始部署</h1></li>
+<li><p>注册<a target="_blank" rel="noopener" href="https://www.vercel.com/">Vercel</a>，用GitHub账号来绑定Vercel，成功后选择Add new project，并将项目上传.<br><img src="https://ice.frostsky.com/2023/08/27/35164d9664ab34ddb6e72f10a733aa83.png" alt="35164d9664ab34ddb6e72f10a733aa83.png"></p>
+</li>
+<li><p>在项目配置页，点开 Environmane Variables 开始配置环境变量，并依次新增名为 OPENAI_API_KEY 和 CODE 的环境变量.<br><img src="https://ice.frostsky.com/2023/08/27/c704b87b6517695b23bfca43664dc5bb.png" alt="c704b87b6517695b23bfca43664dc5bb.png"><br><img src="https://ice.frostsky.com/2023/08/27/220a6f61ea22c767d29f68b2506ec2a2.png" alt="220a6f61ea22c767d29f68b2506ec2a2.png"></p>
+<ul>
+<li>OPENAI_API_KEY中添加的是你自己账号的<a target="_blank" rel="noopener" href="https://platform.openai.com/account/api-keys">API</a>，CODE添加是密码，当一切妥当后，便可以点击Deploy了，网站也会成功部署.</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-添加域名"><a href="#3-添加域名" class="headerlink" title="3.添加域名"></a>3.添加域名</h1><ul>
+<li>首先要买个属于自己的域名，我选择<a target="_blank" rel="noopener" href="https://www.godaddy.com/">GoDaddy</a>，因为国内域名注册及其麻烦，所以还不如用外国平台来购买注册.</li>
+<li>分别进入<code>部署的项目</code>-&gt;<code>Settings</code>-&gt;<code>Domains</code>然后会生成要求解析的类型、名称和值，到自己对应的域名控制台添加相应的解析记录<br><img src="https://ice.frostsky.com/2023/08/27/f886a0d72604c4bd72db679cb5e7c157.png" alt="f886a0d72604c4bd72db679cb5e7c157.png"><br><strong>当配置显示为这样，域名添加也就成功了</strong></li>
+</ul>
+
       </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2023/08/12/hello-world/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+              2023-08-27 11:05:28
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="标签"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/ChatGPT/" title="ChatGPT">
+                        #ChatGPT
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E5%AF%BB%E6%89%BE%E5%90%88%E9%80%82%E8%87%AA%E5%B7%B1%E7%9A%84%E9%A1%B9%E7%9B%AE"><span class="toc-text">1.寻找合适自己的项目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2"><span class="toc-text">2.开始部署</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E6%B7%BB%E5%8A%A0%E5%9F%9F%E5%90%8D"><span class="toc-text">3.添加域名</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
     
   </div>
-  <nav class="post-navigation">
-    
-    <span class="page-num">1 / 1</span>
-    
-  </nav>
-</div>
+
 
         
 <div class="footer">
@@ -388,6 +510,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E9%9B%B6%E6%88%90%E6%9C%AC%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84ChatGPT + '&url=' + http%3A%2F%2Fexample.com%2F2023%2F08%2F27%2F%25E9%259B%25B6%25E6%2588%2590%25E6%259C%25AC%25E9%2583%25A8%25E7%25BD%25B2%25E8%2587%25AA%25E5%25B7%25B1%25E7%259A%2584ChatGPT%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2023/08/27/%E9%9B%B6%E6%88%90%E6%9C%AC%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84ChatGPT/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>
